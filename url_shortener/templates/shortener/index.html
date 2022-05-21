@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <style>
+            body {
+                background: #E6E6E6;
+            }
+
+            .container {
+                margin: 0 auto;
+                margin-top: 50px;
+                width: 700px;
+                background: #F08080;
+                height: 200px;
+                text-align: center;
+                border-radius: 10px;
+            }
+
+            input, label, h1 {
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form }}
+                <button type="submit">Сократить</button>
+            </form>
+            <h1>
+                <a href="{{ shorted_url }}" target="blank">{{ shorted_url }}</a>
+            </h1>
+        </div>
+    </body>
+</html>
